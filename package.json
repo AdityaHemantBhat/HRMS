@@ -8,7 +8,8 @@
     "server": "nodemon server/server.js",
     "client": "cd client && npm start",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "build": "npm install && cd client && npm install && npm run prisma:generate && cd client && npm run build",
+    "build": "npx prisma generate && cd client && npm install && npm run build",
+    "postinstall": "npx prisma generate",
     "install-all": "npm install && cd client && npm install",
     "prisma:generate": "prisma generate",
     "prisma:migrate": "prisma migrate dev",
@@ -33,11 +34,11 @@
     "jsonwebtoken": "^9.0.2",
     "multer": "^1.4.5-lts.1",
     "nodemailer": "^6.9.7",
-    "pdfkit": "^0.13.0"
+    "pdfkit": "^0.13.0",
+    "prisma": "^5.7.0"
   },
   "devDependencies": {
     "concurrently": "^8.2.2",
-    "nodemon": "^3.0.2",
-    "prisma": "^5.7.0"
+    "nodemon": "^3.0.2"
   }
 }

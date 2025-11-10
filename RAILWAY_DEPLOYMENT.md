@@ -64,11 +64,13 @@ COOKIE_EXPIRE=7
 
 1. Go to **"Settings"** tab
 2. Under **"Build"** section:
-   - **Build Command**: `npm run build`
+   - **Build Command**: `npm install && npm run build`
    - **Start Command**: `npm start`
 3. Under **"Deploy"** section:
    - **Root Directory**: leave empty (use root)
    - **Watch Paths**: leave default
+
+**Note**: The `postinstall` script will automatically run `prisma generate` after npm install.
 
 ---
 
