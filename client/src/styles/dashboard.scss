@@ -1,0 +1,179 @@
+.dashboard {
+  .stat-card {
+    border-radius: 12px;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    }
+
+    .ant-statistic {
+      .ant-statistic-title {
+        font-size: 14px;
+        color: #8c8c8c;
+        margin-bottom: 8px;
+      }
+
+      .ant-statistic-content {
+        font-size: 28px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+
+        svg {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+
+  .chart-card {
+    border-radius: 12px;
+
+    .ant-card-head {
+      border-bottom: 1px solid #f0f0f0;
+    }
+  }
+
+  .activity-card {
+    border-radius: 12px;
+    max-height: 400px;
+    overflow-y: auto;
+
+    .activity-item {
+      padding: 12px 0;
+      border-bottom: 1px solid #f0f0f0;
+
+      &:last-child {
+        border-bottom: none;
+      }
+
+      .activity-content {
+        strong {
+          color: #262626;
+          font-size: 14px;
+        }
+
+        p {
+          margin: 4px 0;
+          color: #595959;
+          font-size: 13px;
+        }
+
+        .activity-time {
+          color: #8c8c8c;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  .attendance-card {
+    .attendance-actions {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+
+      .ant-btn {
+        flex: 1;
+        min-width: 150px;
+        height: 56px;
+        font-size: 16px;
+        font-weight: 600;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+      }
+    }
+
+    .attendance-status {
+      padding: 16px;
+      background: #f0f5ff;
+      border-radius: 8px;
+
+      p {
+        margin: 0;
+        font-size: 15px;
+        color: #262626;
+      }
+    }
+  }
+
+  .leave-card {
+    .leave-item {
+      margin-bottom: 24px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      span {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 500;
+        color: #262626;
+      }
+
+      .leave-count {
+        margin-top: 4px;
+        font-size: 13px;
+        color: #8c8c8c;
+      }
+    }
+  }
+
+  .goals-card {
+    .goal-item {
+      padding: 16px;
+      background: #fafafa;
+      border-radius: 8px;
+      margin-bottom: 16px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      .goal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 12px;
+
+        strong {
+          color: #262626;
+          font-size: 15px;
+        }
+      }
+
+      .goal-date {
+        margin-top: 8px;
+        margin-bottom: 0;
+        font-size: 13px;
+        color: #8c8c8c;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard {
+    .stat-card {
+      .ant-statistic-content {
+        font-size: 24px;
+      }
+    }
+
+    .attendance-card {
+      .attendance-actions {
+        .ant-btn {
+          min-width: 100%;
+        }
+      }
+    }
+  }
+}

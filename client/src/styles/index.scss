@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f0f2f5;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.page-header {
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+
+  h1 {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 600;
+    color: #262626;
+  }
+
+  p {
+    margin: 0;
+    color: #8c8c8c;
+    font-size: 14px;
+  }
+}
+
+.ant-card {
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.ant-btn-primary {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border: none;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(99, 102, 241, 0.4);
+    background: linear-gradient(135deg, #4f46e5 0%, #7c3aed 100%);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.ant-table {
+  .ant-table-thead > tr > th {
+    background: #fafafa;
+    font-weight: 600;
+    color: #262626;
+  }
+}
+
+// Custom Toast Notification Styles
+.ant-notification {
+  .ant-notification-notice {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    animation: slideInRight .3s cubic-bezier(0.16, 1, 0.3, 1);
+    background: #ffffff !important;
+    padding: 0 !important;
+    
+    &.custom-toast-success,
+    &.custom-toast-error,
+    &.custom-toast-warning,
+    &.custom-toast-info {
+      .ant-notification-notice-content {
+        background: #ffffff !important;
+        padding: 12px 40px 12px 16px !important;
+        margin: 0 !important;
+      }
+      
+      .ant-notification-notice-with-icon {
+        display: flex !important;
+        flex-direction: row !important;
+        align-items: center !important;
+        
+        .ant-notification-notice-icon {
+          font-size: 18px !important;
+          margin: 0 12px 0 0 !important;
+          line-height: 1 !important;
+          flex-shrink: 0 !important;
+          position: relative !important;
+          top: auto !important;
+          left: auto !important;
+        }
+        
+        .ant-notification-notice-message {
+          color: #1f2937 !important;
+          font-weight: 500 !important;
+          font-size: 14px !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          line-height: 1.4 !important;
+          flex: 1 !important;
+        }
+      }
+      
+      .ant-notification-notice-close {
+        color: #6b7280 !important;
+        position: absolute !important;
+        top: 50% !important;
+        right: 12px !important;
+        transform: translateY(-50%) !important;
+        
+        &:hover {
+          color: #1f2937 !important;
+        }
+      }
+    }
+    
+    &.custom-toast-success {
+      border: 2px solid #10b981 !important;
+      
+      .ant-notification-notice-icon {
+        color: #10b981 !important;
+      }
+    }
+    
+    &.custom-toast-error {
+      border: 2px solid #ef4444 !important;
+      
+      .ant-notification-notice-icon {
+        color: #ef4444 !important;
+      }
+    }
+    
+    &.custom-toast-warning {
+      border: 2px solid #f59e0b !important;
+      
+      .ant-notification-notice-icon {
+        color: #f59e0b !important;
+      }
+    }
+    
+    &.custom-toast-info {
+      border: 2px solid #6366f1 !important;
+      
+      .ant-notification-notice-icon {
+        color: #6366f1 !important;
+      }
+    }
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(120%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-header {
+    h1 {
+      font-size: 24px;
+    }
+  }
+  
+  .ant-notification {
+    margin-right: 8px !important;
+    
+    .ant-notification-notice {
+      max-width: 320px;
+    }
+  }
+}
+
+// Import mobile responsive styles
+@import './mobile-responsive.scss';

@@ -1,0 +1,316 @@
+// Mobile Responsive Styles for HRMS
+
+// Breakpoints
+$mobile: 768px;
+$tablet: 1024px;
+
+// Mobile responsive adjustments
+@media (max-width: $mobile) {
+  
+  // Page header adjustments
+  .page-header {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 16px !important;
+    
+    h1 {
+      font-size: 20px !important;
+    }
+    
+    p {
+      font-size: 13px !important;
+    }
+    
+    .ant-btn {
+      width: 100% !important;
+    }
+  }
+
+  // Card adjustments
+  .ant-card {
+    margin: 0 !important;
+    border-radius: 8px !important;
+    
+    .ant-card-body {
+      padding: 12px !important;
+    }
+  }
+
+  // Table responsive
+  .ant-table-wrapper {
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    position: relative;
+    
+    // Scroll shadow indicator
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      width: 30px;
+      background: linear-gradient(to left, rgba(0,0,0,0.1), transparent);
+      pointer-events: none;
+      opacity: 0.5;
+    }
+    
+    .ant-table {
+      min-width: 800px !important;
+      font-size: 13px !important;
+      
+      .ant-table-thead > tr > th {
+        padding: 8px 8px !important;
+        font-size: 12px !important;
+        white-space: nowrap;
+      }
+      
+      .ant-table-tbody > tr > td {
+        padding: 8px 8px !important;
+        font-size: 13px !important;
+        white-space: nowrap;
+      }
+      
+      // Make action buttons more compact
+      .ant-space {
+        gap: 4px !important;
+      }
+    }
+  }
+
+  // Stats cards and rows
+  .stats-card, .ant-row {
+    .ant-col {
+      margin-bottom: 12px !important;
+    }
+    
+    .ant-statistic-title {
+      font-size: 12px !important;
+    }
+    
+    .ant-statistic-content {
+      font-size: 18px !important;
+    }
+  }
+  
+  // Grid layouts - force single column on mobile
+  .ant-row {
+    .ant-col-xs-24,
+    .ant-col-sm-12,
+    .ant-col-md-8,
+    .ant-col-md-6,
+    .ant-col-lg-6 {
+      max-width: 100% !important;
+      flex: 0 0 100% !important;
+    }
+  }
+
+  // Form adjustments
+  .ant-form {
+    .ant-form-item {
+      margin-bottom: 16px !important;
+    }
+    
+    .ant-space {
+      flex-direction: column !important;
+      width: 100% !important;
+      
+      .ant-space-item {
+        width: 100% !important;
+      }
+    }
+  }
+
+  // Modal adjustments
+  .ant-modal {
+    max-width: calc(100vw - 32px) !important;
+    margin: 16px !important;
+    
+    .ant-modal-body {
+      padding: 16px !important;
+      max-height: calc(100vh - 200px) !important;
+      overflow-y: auto !important;
+    }
+  }
+
+  // Drawer adjustments
+  .ant-drawer {
+    .ant-drawer-body {
+      padding: 16px !important;
+    }
+  }
+
+  // Button groups
+  .ant-space-horizontal {
+    flex-wrap: wrap !important;
+    
+    .ant-btn {
+      margin-bottom: 8px !important;
+    }
+  }
+
+  // Tabs
+  .ant-tabs {
+    .ant-tabs-nav {
+      margin-bottom: 16px !important;
+      
+      .ant-tabs-tab {
+        padding: 8px 12px !important;
+        font-size: 13px !important;
+      }
+    }
+  }
+
+  // Date picker
+  .ant-picker {
+    width: 100% !important;
+  }
+
+  // Select
+  .ant-select {
+    width: 100% !important;
+  }
+
+  // Calendar responsive
+  .ant-picker-calendar {
+    .ant-picker-calendar-header {
+      flex-direction: column !important;
+      gap: 12px !important;
+      
+      .ant-picker-calendar-mode-switch {
+        width: 100% !important;
+      }
+    }
+    
+    .ant-picker-panel {
+      .ant-picker-date-panel {
+        .ant-picker-cell {
+          padding: 4px 0 !important;
+        }
+      }
+    }
+  }
+
+  // Attendance specific
+  .attendance-calendar {
+    .ant-badge-status-text {
+      font-size: 11px !important;
+    }
+  }
+
+  // Payroll specific
+  .payroll-summary {
+    .ant-col {
+      margin-bottom: 12px !important;
+    }
+  }
+
+  // Project cards
+  .project-card {
+    margin-bottom: 16px !important;
+    
+    .ant-card-meta-title {
+      font-size: 14px !important;
+    }
+    
+    .ant-card-meta-description {
+      font-size: 12px !important;
+    }
+  }
+
+  // Performance metrics
+  .performance-metrics {
+    .ant-progress {
+      .ant-progress-text {
+        font-size: 12px !important;
+      }
+    }
+  }
+
+  // Filter section
+  .filter-section {
+    .ant-space {
+      width: 100% !important;
+      
+      .ant-space-item {
+        width: 100% !important;
+      }
+    }
+  }
+
+  // Action buttons in tables
+  .ant-table-tbody {
+    .ant-btn-link {
+      padding: 0 4px !important;
+      font-size: 12px !important;
+    }
+  }
+
+  // Tags
+  .ant-tag {
+    font-size: 11px !important;
+    padding: 2px 6px !important;
+  }
+
+  // Descriptions
+  .ant-descriptions {
+    .ant-descriptions-item-label {
+      font-size: 12px !important;
+    }
+    
+    .ant-descriptions-item-content {
+      font-size: 13px !important;
+    }
+  }
+
+  // Timeline
+  .ant-timeline {
+    .ant-timeline-item-content {
+      font-size: 13px !important;
+    }
+  }
+
+  // Collapse
+  .ant-collapse {
+    .ant-collapse-header {
+      padding: 12px 16px !important;
+      font-size: 14px !important;
+    }
+    
+    .ant-collapse-content-box {
+      padding: 12px 16px !important;
+    }
+  }
+}
+
+// Tablet adjustments
+@media (min-width: $mobile) and (max-width: $tablet) {
+  .ant-table-wrapper {
+    .ant-table {
+      font-size: 14px !important;
+    }
+  }
+  
+  .page-header {
+    h1 {
+      font-size: 24px !important;
+    }
+  }
+}
+
+// Landscape mobile
+@media (max-width: $mobile) and (orientation: landscape) {
+  .ant-modal {
+    .ant-modal-body {
+      max-height: calc(100vh - 150px) !important;
+    }
+  }
+  
+  .page-header {
+    flex-direction: row !important;
+    
+    .ant-btn {
+      width: auto !important;
+    }
+  }
+}
